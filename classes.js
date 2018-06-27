@@ -30,7 +30,17 @@
 */
 
 //Code Here
-
+class Employee {
+  constructor(first_name,last_name,email,age){
+    this.first_name = first_name
+    this.last_name = last_name
+    this.email = email
+    this.age = age
+  }
+  makeWidget(){
+    return this.first_name + " " + this.last_name + " Widget"
+  }
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -50,7 +60,24 @@
 */
 
 //Code Here
-
+class Manager {
+  constructor(first_name,last_name,email,age,reports){
+    this.first_name = first_name
+    this.last_name = last_name
+    this.email = email
+    this.age = age
+    this.reports = []
+  }
+  makeWidget(){
+    return this.first_name + " " + this.last_name + " Widget"
+  }
+  hire(newEmployee){
+    this.reports.push(newEmployee)
+  }
+  fire(index){
+    this.reports.splice(index,1)
+  }
+}
 
 
 ////////// PROBLEM 3 //////////
